@@ -41,4 +41,10 @@ jobs:
       with:
         name: newproject_eadishchev
         path: dist/
-    - run: ls -lR
+    - name: Publish package
+      run: >-
+        uv publish --publish-url https://test.pypi.org/legacy/
+        --check-url https://test.pypi.org/simple/ dist/*
+      env:
+        UV_PUBLISH_USERNAME: __token__
+        UV_PUBLISH_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
