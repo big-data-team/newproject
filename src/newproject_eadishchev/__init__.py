@@ -1,4 +1,4 @@
-VAR = 1000
+VAR = 3.1415
 
 
 def sum_of_two(a, b):
