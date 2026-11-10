@@ -7,7 +7,9 @@ authors = [
     { name = "Evgeny A", email = "eadishchev@gmail.com" }
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "ipython>=8.39.0",
+]
 
 [project.scripts]
 newproject-eadishchev = "newproject_eadishchev:main"

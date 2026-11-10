@@ -1,2 +1,2 @@
-def main() -> None:
-    print("Hello from newproject-eadishchev!")
+def  sum_of_two(a,    b   ):
+    return a -  b
