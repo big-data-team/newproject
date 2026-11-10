@@ -29,3 +29,16 @@ jobs:
       with:
         name: newproject_eadishchev
         path: dist/*
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    steps:
+    - name: Install uv
+      uses: astral-sh/setup-uv@v8.1.0
+    - name: Download package
+      uses: actions/download-artifact@v8
+      with:
+        name: newproject_eadishchev
+        path: dist/
+    - run: ls -lR
